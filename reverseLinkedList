@@ -1,0 +1,15 @@
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* a=head;
+        ListNode* n=NULL;
+        ListNode* c;
+        while(a!=NULL){
+           c=a->next;
+            a->next=n;
+            n=a;
+            a=c;
+        }
+        return n;
+    }
+};
